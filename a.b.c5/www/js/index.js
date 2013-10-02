@@ -38,7 +38,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 		
-				
+		var commandresult;		
 		commandresult = alert("Calling Device Ready");
 		
 		if(commandresult) alert("Calling Device Ready Was Good"); else alert("Bad Calling Device READY");
