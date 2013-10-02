@@ -39,7 +39,9 @@ var app = {
         app.receivedEvent('deviceready');
 		
 				
-		alert("Calling Device Ready");
+		commandresult = alert("Calling Device Ready");
+		
+		if(commandresult) alert("Calling Device Ready Was Good"); else alert("Bad Calling Device READY");
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
