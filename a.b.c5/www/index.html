@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>PhoneGap Device Ready Example</title>
@@ -6,32 +7,39 @@
 
   </head>
   <body>
-<p id="devicestateid">  At first the text was this  </p>
-  </body>
-  
-  
+<br><br><br><br>
+	<CENTER><p id="devicemagictext"> Text At First</p><CENTER>
+
+ </body>
   
       <script type="text/javascript" charset="utf-8">
 
+    // Call onDeviceReady when PhoneGap is loaded.
+    //
+    // At this point, the document has loaded but phonegap-1.0.0.js has not.
+    // When PhoneGap is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    // 
     document.addEventListener("deviceready", onDeviceReady, false);
 
     // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
     //
     function onDeviceReady() 
 	{
-        //document.addEventListener("offline", onOffline, false);
-		document.getElementById("devicestateid").innerHTML="Device Is Ready! onDeviceReady function successfully ran";
-    }
-
-    // Handle the offline event
-    //
-    function onOffline() 
-	{
-	
-		//document.getElementById("devicestateid").innerHTML="If Device is Offline you would see this";
+        document.addEventListener("pause", onPause, false);
+		document.getElementById("innerHTMLtxt").devicemagictext = "onDeviceReady function executed";
 		
     }
-	//document.getElementById("devicestateid").innerHTML="all ran and now this";
+
+    // Handle the pause event
+    //
+    function onPause() 
+	{
+    
+	
+	
+	}
+
     </script>
   
 </html>
