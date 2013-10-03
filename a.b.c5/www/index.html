@@ -3,14 +3,16 @@
     <title>PhoneGap Device Ready Example</title>
 
     <script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
-    <script type="text/javascript" charset="utf-8">
 
-    // Call onDeviceReady when PhoneGap is loaded.
-    //
-    // At this point, the document has loaded but phonegap-1.0.0.js has not.
-    // When PhoneGap is loaded and talking with the native device,
-    // it will call the event `deviceready`.
-    // 
+  </head>
+  <body>
+<p id="devicestateid">  At first the text was this  </p>
+  </body>
+  
+  
+  
+      <script type="text/javascript" charset="utf-8">
+
     document.addEventListener("deviceready", onDeviceReady, false);
 
     // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
@@ -26,13 +28,10 @@
     function onOffline() 
 	{
 	
-		document.getElementById("devicestateid").innerHTML="Device Is Ready! onDeviceReady function successfully ran";
+		document.getElementById("devicestateid").innerHTML="If Device is Offline you would see this";
 		
     }
-
+	
     </script>
-  </head>
-  <body>
-  <div id="devicestateid">At first this was the text </div>
-  </body>
+  
 </html>
